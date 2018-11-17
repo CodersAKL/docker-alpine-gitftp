@@ -1,13 +1,12 @@
 # Use an official Alpine Linux as a parent image
-FROM alpine:latest
+FROM mhart/alpine-node:10
 
 # Install bash, make, curl, git
 RUN apk update \
     && apk add bash \
     && apk add make \
     && apk add curl \
-    && apk add git \
-    && apk add nodejs
+    && apk add git
 
 # Create and set WORKDIR to the git-ftp installation folder
 WORKDIR /opt/git-ftp/
