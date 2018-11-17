@@ -7,7 +7,7 @@ RUN apk update \
     && apk add make \
     && apk add curl \
     && apk add git \
-    && apk add node
+    && apk add nodejs
 
 # Create and set WORKDIR to the git-ftp installation folder
 WORKDIR /opt/git-ftp/
